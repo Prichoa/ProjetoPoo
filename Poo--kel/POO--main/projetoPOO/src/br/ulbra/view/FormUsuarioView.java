@@ -55,22 +55,23 @@ public class FormUsuarioView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 0));
 
+        jLabel2.setBackground(new java.awt.Color(153, 153, 255));
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(43, 9, 62));
+        jLabel2.setForeground(new java.awt.Color(153, 153, 255));
         jLabel2.setText("Nome:");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(43, 9, 62));
+        jLabel3.setForeground(new java.awt.Color(153, 153, 255));
         jLabel3.setText("E-mail:");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(43, 9, 62));
+        jLabel4.setForeground(new java.awt.Color(153, 153, 255));
         jLabel4.setText("Senha:");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(43, 9, 62));
+        jLabel5.setForeground(new java.awt.Color(153, 153, 255));
         jLabel5.setText("Sexo:");
 
         txtNome.setText("Insira o  nome...");
@@ -129,7 +130,7 @@ public class FormUsuarioView extends javax.swing.JFrame {
         jPanel3.setForeground(new java.awt.Color(255, 102, 153));
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 102, 153));
+        jLabel8.setForeground(new java.awt.Color(102, 0, 0));
         jLabel8.setText("Cadastro de Usuários");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -188,12 +189,9 @@ public class FormUsuarioView extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(16, 16, 16))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addGap(16, 16, 16))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(16, 16, 16))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 6, Short.MAX_VALUE))))
@@ -304,6 +302,7 @@ public class FormUsuarioView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Usuario u = new Usuario(); //Criaremos um objeto da classe Usuario
+        
         try {
             UsuarioDAO ud = new UsuarioDAO();
             u.setNome(txtNome.getText());
